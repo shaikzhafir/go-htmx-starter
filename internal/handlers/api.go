@@ -19,3 +19,11 @@ func (a *APIHandler) GetFakeData() http.HandlerFunc {
 		w.Write([]byte("wow this is fake data!, u wrote " + name + "in the request!"))
 	}
 }
+
+func (a *APIHandler) GetProfile() http.HandlerFunc {
+	// render profile page
+	return func(w http.ResponseWriter, r *http.Request) {
+		// render profile page
+		w.Write([]byte("Profile page"))
+	}
+}
